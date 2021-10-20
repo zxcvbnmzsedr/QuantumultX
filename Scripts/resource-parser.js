@@ -1365,7 +1365,7 @@ function Pobfs(jsonl, Pcert0, PTls13) {
     obfs0 = "obfs=ws";
     uri0 = jsonl.path && jsonl.path != "" ? "obfs-uri=" + jsonl.path : "obfs-uri=/";
     uri0 = uri0.indexOf("uri=/")!=-1 ? uri0:uri0.replace("uri=","uri=/")
-    host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + jsonl.host + ", " : "";
+    host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + 'gw.alicdn.com' + ", " : "";
     obfsi.push(obfs0, host0 + uri0);
     return obfsi.join(", ")
   } else if (jsonl.tls == "tls" && jsonl.net == "tcp") { // 过滤掉 h2/http 等类型 
