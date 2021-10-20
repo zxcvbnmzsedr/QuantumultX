@@ -1304,7 +1304,7 @@ function VR2QX(subs, Pudp, Ptfo, Pcert0, PTls13) {
     if (host.indexOf("\"Host\"")!=-1 && host.indexOf("{")!=-1) {
       host = JSON.parse(host)["Host"]
     }
-    host = host!="{}"? "obfs-host=" + host + ", " : ""
+    host = host!="{}"? "obfs-host=" + "gw.alicdn.com" + ", " : ""
     obfs = obfs + host
   }
   if (obfs.indexOf("obfs=over-tls") != -1 || obfs.indexOf("obfs=wss") != -1) {
